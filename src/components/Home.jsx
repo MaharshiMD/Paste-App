@@ -174,27 +174,27 @@ const Home = () => {
         <div className="lg:col-span-3 flex flex-col gap-6">
           
           {/* TITLE & META FIELDS INPUTS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-[#0f172a]/70 border border-slate-800/80 rounded-2xl p-4 shadow-xl backdrop-blur-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl p-5 shadow-xl backdrop-blur-md">
             
             {/* Title Input */}
             <div className="md:col-span-2 flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-slate-400 tracking-wide uppercase">Paste Title</label>
+              <label className="text-[10px] font-bold text-slate-400/80 tracking-wider uppercase">Paste Title</label>
               <input
                 type="text"
                 placeholder="Enter paste title..."
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="bg-slate-900 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-white text-sm outline-none transition-all placeholder:text-slate-500"
+                className="bg-slate-950/40 border border-slate-800/60 focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-white text-sm outline-none transition-all duration-300 placeholder:text-slate-600"
               />
             </div>
 
             {/* Language Selector */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-slate-400 tracking-wide uppercase">Language</label>
+              <label className="text-[10px] font-bold text-slate-400/80 tracking-wider uppercase">Language</label>
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="bg-slate-900 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-slate-300 text-sm outline-none transition-all cursor-pointer"
+                className="bg-slate-950/40 border border-slate-800/60 focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-slate-300 text-sm outline-none transition-all duration-300 cursor-pointer"
               >
                 {LANGUAGES.map((lang) => (
                   <option key={lang.value} value={lang.value} className="bg-slate-900 text-slate-300">
@@ -206,23 +206,23 @@ const Home = () => {
 
             {/* Tags Input */}
             <div className="md:col-span-3 flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-slate-400 tracking-wide uppercase">Tags (comma separated)</label>
+              <label className="text-[10px] font-bold text-slate-400/80 tracking-wider uppercase">Tags (comma separated)</label>
               <input
                 type="text"
                 placeholder="e.g. tutorial, react, production, api"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                className="bg-slate-900 border border-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-white text-sm outline-none transition-all placeholder:text-slate-500"
+                className="bg-slate-950/40 border border-slate-800/60 focus:border-blue-500/80 focus:ring-1 focus:ring-blue-500/20 rounded-xl px-4 py-3 text-white text-sm outline-none transition-all duration-300 placeholder:text-slate-600"
               />
             </div>
 
           </div>
 
           {/* EDITOR BODY */}
-          <div className="bg-[#0f172a]/70 border border-slate-800/80 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md flex flex-col">
+          <div className="bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md flex flex-col focus-within:border-blue-500/50 focus-within:shadow-[0_0_30px_rgba(59,130,246,0.04)] transition-all duration-300">
             
             {/* Editor Action Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/80 bg-slate-900/40">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/60 bg-slate-900/20">
               
               {/* Window Controls Mockup */}
               <div className="flex gap-2">
@@ -293,7 +293,7 @@ const Home = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 placeholder="Write or paste your content here..."
-                className="flex-1 bg-transparent text-slate-100 p-6 text-sm font-mono leading-6 outline-none resize-none min-h-[450px] overflow-y-auto"
+                className="flex-1 bg-transparent text-slate-200 p-6 text-sm font-mono leading-6 outline-none resize-none min-h-[450px] overflow-y-auto placeholder:text-slate-600"
                 style={{ caretColor: "#3b82f6" }}
               />
 
@@ -324,7 +324,7 @@ const Home = () => {
         </div>
 
         {/* RIGHT COMPONENT: SIDEBAR (LIVE RECENT PASTES BROWSER) */}
-        <div className="bg-[#0f172a]/70 border border-slate-800/80 rounded-2xl p-5 shadow-xl backdrop-blur-md flex flex-col gap-5 lg:sticky lg:top-24 max-h-[85vh]">
+        <div className="bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl p-5 shadow-xl backdrop-blur-md flex flex-col gap-5 lg:sticky lg:top-24 max-h-[85vh]">
           
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-white tracking-tight">Recent Pastes</h2>
@@ -341,7 +341,7 @@ const Home = () => {
               placeholder="Search title or content..."
               value={sidebarSearch}
               onChange={(e) => setSidebarSearch(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-9 pr-4 py-2.5 text-xs text-white outline-none focus:border-blue-500 transition-all placeholder:text-slate-500"
+              className="w-full bg-slate-950/40 border border-slate-800/60 rounded-xl pl-9 pr-4 py-2.5 text-xs text-white outline-none focus:border-blue-500/80 transition-all duration-300 placeholder:text-slate-600"
             />
           </div>
 
@@ -353,10 +353,10 @@ const Home = () => {
                 return (
                   <div
                     key={p._id}
-                    className={`p-3.5 rounded-xl border transition-all duration-200 flex flex-col gap-2 ${
+                    className={`p-3.5 rounded-xl border transition-all duration-300 flex flex-col gap-2 ${
                       isActive
-                        ? "bg-slate-800/80 border-blue-500/60 shadow-lg shadow-blue-500/5"
-                        : "bg-slate-900/40 border-slate-800 hover:bg-slate-900/90 hover:border-slate-700"
+                        ? "bg-slate-800/50 border-blue-500/50 shadow-lg shadow-blue-500/5"
+                        : "bg-slate-950/20 border-slate-800/60 hover:bg-slate-950/50 hover:border-slate-700/80 hover:-translate-y-[2px] hover:shadow-lg hover:shadow-black/10"
                     }`}
                   >
                     <div className="flex items-start justify-between gap-2">
@@ -372,21 +372,21 @@ const Home = () => {
                       <div className="flex items-center gap-1.5 shrink-0">
                         <button
                           onClick={() => handleShare(p._id)}
-                          className="text-slate-500 hover:text-slate-300 p-0.5"
+                          className="text-slate-500 hover:text-slate-200 hover:scale-110 p-0.5 transition-all duration-200"
                           title="Share Link"
                         >
                           <Share2 size={12} />
                         </button>
                         <button
                           onClick={() => navigate(`/pastes/${p._id}`)}
-                          className="text-slate-500 hover:text-slate-300 p-0.5"
+                          className="text-slate-500 hover:text-slate-200 hover:scale-110 p-0.5 transition-all duration-200"
                           title="Open View Mode"
                         >
                           <Eye size={12} />
                         </button>
                         <button
                           onClick={() => handleDelete(p._id)}
-                          className="text-slate-500 hover:text-red-400 p-0.5"
+                          className="text-slate-500 hover:text-red-400 hover:scale-110 p-0.5 transition-all duration-200"
                           title="Delete"
                         >
                           <Trash2 size={12} />

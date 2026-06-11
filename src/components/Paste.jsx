@@ -63,12 +63,12 @@ const Paste = () => {
       </div>
 
       {/* Advanced Search Input */}
-      <div className="relative bg-[#0f172a]/70 border border-slate-800 rounded-2xl p-1 shadow-lg backdrop-blur-md">
+      <div className="relative bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl p-1 shadow-lg backdrop-blur-md focus-within:border-blue-500/50 transition-all duration-300">
         <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500" size={20} />
         <input
           type="search"
           placeholder="Search by title, content, language, or tag..."
-          className="w-full bg-transparent text-white text-base py-3.5 pl-12 pr-6 outline-none focus:ring-0 placeholder:text-slate-500"
+          className="w-full bg-transparent text-white text-base py-3.5 pl-12 pr-6 outline-none focus:ring-0 placeholder:text-slate-600"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -80,7 +80,7 @@ const Paste = () => {
           filteredPastes.map((paste) => (
             <div
               key={paste._id}
-              className="group bg-[#0f172a]/55 border border-slate-800/80 hover:border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/[0.03] transition-all duration-300 rounded-2xl p-6 flex flex-col justify-between gap-6 backdrop-blur-sm"
+              className="group bg-[#0f172a]/40 border border-slate-800/60 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/[0.03] hover:-translate-y-[2px] transition-all duration-300 rounded-2xl p-6 flex flex-col justify-between gap-6 backdrop-blur-md"
             >
               
               {/* Card Header & Content */}
@@ -104,7 +104,7 @@ const Paste = () => {
                 </h3>
 
                 {/* Content Snippet (Truncated to maintain layout harmony) */}
-                <p className="text-slate-400 text-sm leading-relaxed font-mono bg-slate-950/35 p-4 rounded-xl border border-slate-800/50 min-h-[100px] max-h-[140px] overflow-hidden line-clamp-4">
+                <p className="text-slate-350 text-xs leading-6 font-mono bg-slate-950/40 p-4 rounded-xl border border-slate-850 min-h-[100px] max-h-[140px] overflow-hidden line-clamp-4">
                   {paste.content}
                 </p>
 
@@ -197,7 +197,7 @@ const Paste = () => {
             </div>
           ))
         ) : (
-          <div className="col-span-full py-24 flex flex-col justify-center items-center text-center bg-[#0f172a]/40 border border-slate-800 rounded-3xl p-8 shadow-inner">
+          <div className="col-span-full py-24 flex flex-col justify-center items-center text-center bg-[#0f172a]/20 border border-slate-800/60 rounded-3xl p-8 shadow-xl backdrop-blur-md">
             <span className="text-6xl mb-4">📂</span>
             <h3 className="text-xl font-bold text-white">No Snippets Found</h3>
             <p className="text-slate-400 mt-2 text-sm max-w-xs">

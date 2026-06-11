@@ -4,8 +4,8 @@ import { Terminal } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/80 transition-all">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <nav className="w-full sticky top-0 z-50 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/80 transition-all flex justify-center">
+      <div className="w-full max-w-7xl px-6 h-16 flex items-center justify-between">
         
         {/* LOGO */}
         <Link 

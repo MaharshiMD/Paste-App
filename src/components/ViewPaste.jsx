@@ -67,7 +67,7 @@ const ViewPaste = () => {
       </div>
 
       {/* Title & Metadata Card */}
-      <div className="bg-[#0f172a]/70 border border-slate-800/80 rounded-2xl p-6 shadow-xl backdrop-blur-md flex flex-col gap-4">
+      <div className="bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl p-6 shadow-xl backdrop-blur-md flex flex-col gap-4">
         
         <div className="flex flex-wrap items-center justify-between gap-3">
           <span className="bg-slate-800/90 text-slate-300 border border-slate-700 px-3 py-1 rounded-md text-xs font-mono uppercase tracking-wider">
@@ -101,10 +101,10 @@ const ViewPaste = () => {
       </div>
 
       {/* Editor Mockup for code display */}
-      <div className="bg-[#0f172a]/70 border border-slate-800/80 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md flex flex-col">
+      <div className="bg-[#0f172a]/40 border border-slate-800/60 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-md flex flex-col">
         
         {/* Editor Mockup Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/80 bg-slate-900/40">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800/60 bg-slate-900/20">
           
           <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-[#ef4444] opacity-80"></div>
@@ -154,13 +154,13 @@ const ViewPaste = () => {
             value={content}
             disabled
             rows={20}
-            className="flex-1 bg-transparent text-slate-100 p-6 text-sm font-mono leading-6 outline-none resize-none min-h-[450px] overflow-y-auto cursor-text select-text"
+            className="flex-1 bg-transparent text-slate-200 p-6 text-sm font-mono leading-6 outline-none resize-none min-h-[450px] overflow-y-auto cursor-text select-text"
           />
 
         </div>
 
         {/* Stats footer bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-3 bg-slate-900/50 border-t border-slate-800/60 text-xs text-slate-400">
+        <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-3 bg-slate-900/50 border-t border-slate-800/50 text-xs text-slate-400">
           <div className="flex items-center gap-6">
             <span>Characters: <strong className="text-slate-200">{charCount}</strong></span>
             <span>Words: <strong className="text-slate-200">{wordCount}</strong></span>
